@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Thesis</title>
+	<link rel="stylesheet" type="text/css" href="demo.css">
+	<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="pageswitch.js"></script>
+	<script src="echarts.min.js"></script>
+	<script src="init_echarts.js"></script>
+
+</head>
+<body>
+	<div id="container" data-PageSwitch>
+		<div class="sections">
+			<div class="section active" id="section0">
+				<div class="navigation" style="height:80px; margin:0 auto; overflow:hidden;">
+						<img src="images/sysu.png"> <!--需要一个透明的logo-->
+						<img src = "images/gis_rs.png">
+						<span style="float:right;">
+							<img src="images/wechat_img.png">
+							<img style=" height:80px;  position:relative; top:auto;" src="images/wechat_QRCode.png" />
+						</span>
+						
+				</div>
+				<div class="intro">
+					<!--<h1 class="article_title">耦合动态地块分裂和CA的<br/>大尺度城市用地模拟</h1>-->
+				</div>
+			</div>
+
+			<div class="section" id="section1" style="background-color:#eee">
+				<div style="width:100%;position: relative;">
+					<div id = "lu_09_14_gif" style="float: left">
+						<img style="width: 630px;height:500px;margin:0px auto auto 20px;position: relative;" src = "images/lu09_2_14.gif"/>
+					</div>
+					<div id="lu_ratio_chart" style="width: 600px;height:300px;margin:20px 30px 0px  auto; position: relative;float:right"></div>
+				</div>
+				<div style="width:100%;position: absolute; top:50%">
+					<div style="width: 50%; position: absolute; bottom: 0%; left: 5%">
+						<marquee scrolldelay="200" direction="up" behavior="slide">
+							&hearts;&nbsp;深圳市包含福田、盐田、罗湖、南山、宝安、龙岗、龙华、光明、坪山和大鹏 10 个区。<br/><br/>
+							&hearts;&nbsp;根据我国<a href="http://ghj.dingxi.gov.cn/dxghj/zcfg/webinfo/2013/11/1385344424341926.htm" target="_blank">《城市用地分类与规划建设用地标准》</a>，对 50 种用地类型进行重新划分和归并，<br/>
+							&nbsp;&nbsp;&nbsp;将其分类为非建设用地、公共管理与公共服务用地、居住用地、商业用地和工业用地五类。<br/><br/>
+							&hearts;&nbsp;研究区2009年的土地利用规划数据包含 104608 个矢量地块单元，面积总计1996.85km<sup>2</sup>。<br/>
+							&hearts;&nbsp;2009-2014 年公共、居住、商业、工业用地平均每年增长约 1.7km<sup>2</sup>、2.1km<sup>2</sup>、1.0km<sup>2</sup>和 <br/>
+							&nbsp;&nbsp;&nbsp;2.5km<sup>2</sup>。
+						</marquee>
+					</div>
+					<div id="lu_change_grid" style="width: 600px;height:300px;margin:0 30px 0 auto; position: relative;float:right"></div>
+				</div>
+			</div>
+
+			<div class="section" id="section2" style="background-color:#eee">
+				<div style="width:100%; height: 50%; position: absolute; top: 0; left: 0">
+					<div style="position: absolute;left:0;top:0">
+						<img style="width: 630px;height:100%;margin:0px auto;" src = "images/true_predict.gif"/>
+					</div>
+					<div style="width: 50%; position: absolute; top: 15%; left: 50%; ">
+						&hearts;&nbsp;公共用地扩展的空间布局受区位因素和交通因素的影响较大，道路通达性越高、位置越优越的<br/>
+						&nbsp;&nbsp;&nbsp;地区更便于与其他地区之间商品、信息、资金等的流通，进而促进其他用地向城市用地的转变。<br/><br/>
+						&hearts;&nbsp;居住用地扩张的空间分布受交通要素和区位因素的影响强烈，良好的城市交通基础设施能够降<br/>
+						&nbsp;&nbsp;&nbsp;低城区内居民的生活成本，从而让建设用地扩张沿着经济运行成本最节约的方向进行。<br/><br/>
+						&hearts;&nbsp;商业用地受交通因素和人流量影响较大，受市场利益驱动的影响较大，对交通可达性要求较高，<br/>
+						&nbsp;&nbsp;&nbsp;置上靠近城市中心和贸易集市中心。<br/><br/>
+						&hearts;&nbsp;工业区的发展往往需要配套一定的基础设施并形成生产链，容易出现集聚效应。工厂的选址需<br/>
+						&nbsp;&nbsp;&nbsp;要优先考虑货物的运送成本，同时也需要考虑货物供给和与同类型工厂的竞争和合作。
+					</div>
+				</div>
+				<div style="width:100%; height: 50%; position:absolute; top:50%;left:0">
+					<div id="feature_importance_chart" style="width: 50%;height: 100%; float: right; margin: 0 30px 0px auto"></div>
+					<div style="width: 50%; position: absolute; bottom: 15%; left: 2%; ">
+						&hearts;&nbsp;受实际非城市用地转变量的影响，基于传统的总体精度和 Kappa 系数等精度评价指<br/>
+						&nbsp;&nbsp;&nbsp;标进行评估不能很好地反应模拟精度。<br/><br/>
+						&hearts;&nbsp;事实上，通过将模拟结果和真实情景转换到栅格空间进行像元级别的精度评估，其总<br/>
+						&nbsp;&nbsp;&nbsp;体精度和 Kappa 系数高达 96.41% 和 0.927。<br/><br/>
+						&hearts;&nbsp;采用景观指数相似度<a href="http://www.tandfonline.com/doi/abs/10.1080/13658816.2013.831868" target="_blank">(Chen et al. 2014)</a>来评估真实情景和模拟结果空间格局的相似度，<br/>
+						&nbsp;&nbsp;&nbsp;采用品质因数<a href="http://www.tandfonline.com/doi/abs/10.1111/j.1467-8306.2007.00577.x" target="_blank">(Pontius Jr et al. 2007)</a>来评估模拟精度。<br/>
+					</div>
+				</div>
+			</div>
+
+			<div class="section" id="section3" style="background-color:#eee">
+				<div id="accuracy_chart" style="width: 600px;height:300px;margin:0px 10px auto  auto; float:left"></div>
+				<div id="sz_map" style="width: 700px;height:500px; margin:80px auto 0 auto;float: right"></div>
+				<div style="width: 50%; height: 50%; position: absolute; top: 50%; left: 4%; ">
+					<marquee scrolldelay="500" direction="up"> <!--behavior="slide"-->
+						&hearts;&nbsp;采用RFA-VCA能比Patch-CA获得更高的景观格局相似度（分别为 90.95% 和 87.63% ），<br/>
+						&nbsp;&nbsp;&nbsp;而DLPS-VCA能模拟出与真实发展模式更相似的景观格局（ 92.61% ）。<br/><br/>
+						&hearts;&nbsp;正确模拟的用地类型转变占比较高，且主要分布在坪山新区、龙华新区、坪山新区等新兴<br/>
+						&nbsp;&nbsp;&nbsp;地区和宝安、龙岗等发展空间较大的区域。<br/><br/>
+						&hearts;&nbsp;采用DLPS-VCA模拟的生产者精度为 37.45% ，用户精度为 37.20% ，品质因数( Figure of<br/>
+						&nbsp;&nbsp;&nbsp;Merit, 缩写为FoM )为 23.21% 。由于研究区为深圳市全市，面积达到了 1996.85km<sup>2</sup>，模拟<br/>
+						&nbsp;&nbsp;&nbsp;尺度非常大，且研究期内平均每类城市用地的转换量仅为 0.60% 。另外本研究采用 CA 模<br/>
+						&nbsp;&nbsp;&nbsp;型进行多类土地利用的模拟，相比于二类用地模拟难度更高、转换规则更难挖掘，能达到<br/>
+						&nbsp;&nbsp;&nbsp;23.21% 的 FoM已经非常可观。<br/><br/>
+
+						&hearts;&nbsp;采用Patch-CA进行城市模拟的精度普遍偏低（生产者精度为 29.83% ，用户精度为 29.05% ，<br/>
+						&nbsp;&nbsp;&nbsp;FoM 为 17.43% ），说明采用矢量元胞进行模拟比 Patch-CA 具有更高的空间匹配度。<br/><br/>
+						&hearts;&nbsp;与不耦合动态地块分裂的模拟模型对比表明，通过耦合动态地块分裂，该模型的模拟精度<br/>
+						&nbsp;&nbsp;&nbsp;能有所提高（生产者精度、用户精度、FoM 分别提高了 4.71% 、 5.29%、3.71% ）。<br/><br/>
+					</marquee>
+				</div>
+			</div>
+			<div class="section" id="section4">
+				<div id="neighbor_effect_chart" style="width: 50%;height:300px;margin:10px auto 0px auto; float:left"></div>
+				<div style="width: 50%; height:300px; position: absolute; top: 8%; left: 50%;">
+					&hearts;&nbsp;<strong>缓冲距离为800米时模拟精度最高。</strong>当缓冲距离小于800米时，其模拟精度随着缓冲距离的增<br/>
+					&nbsp;&nbsp;&nbsp;大而逐渐增大，当缓冲距离大于800米时模拟精度逐渐降低。<br/><br/>
+					&hearts;&nbsp;当缓冲距离很小时，由于单个元胞的面积较大（平均面积19040m<sup>2</sup>）时，其缓冲邻域内的元胞<br/>
+					&nbsp;&nbsp;&nbsp;数目非常少，或者邻域元胞的面积很小，进而导致元胞的各类邻域效应为0或近似为0，各类邻<br/>
+					&nbsp;&nbsp;&nbsp;域效应差别不明显。<br/><br/>
+					&hearts;&nbsp;当缓冲范围过大时，邻域范围内各类用地的面积都比较大，使得距离较远的邻居元胞对中心元<br/>
+					&nbsp;&nbsp;&nbsp;胞的影响过大化，从而造成误差。<br/><br/>
+					&hearts;&nbsp;事实上，城市功能区的内部结构在空间上一般呈现集聚分布<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.143.594&rep=rep1&type=pdf" target="_blank">(Schweitzer and Steinbink 1997,</a> <br/>
+					&nbsp;&nbsp;&nbsp;<a href="https://academic.oup.com/joeg/article-abstract/14/4/759/1747263/Cities-as-spatial-clusters?redirectedFrom=fulltext" target="_blank">Rauch 2013)</a>，城市结构受所在集聚中心的影响远大于集聚圈外城市功能区的影响。<br/><br/>
+					&hearts;&nbsp;所以，城市系统的模拟精度与缓冲距离<strong>并非简单的线性关系</strong>。
+				</div>
+				<div style="position:absolute; top: 50%; left: 0">
+					<img style="width: 100%; height:50%; margin: 0px" src="images/last.png"/>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		load_neighbor_effect_chart();
+		load_acc_chart();
+		load_lu_change_grid();
+		load_lu_ratio();
+		load_feature_importance_chart();
+		loadMap();
+	</script>
+
+</body>
+</html>
