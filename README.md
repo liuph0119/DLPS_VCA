@@ -8,3 +8,4 @@ dynamic land parcel subdivision based vector cellular automata
 ![](https://pan.baidu.com/s/1c2gnVQ4)
 ![](https://pan.baidu.com/s/1jIKDnTW)
 ![](https://pan.baidu.com/s/1i4M0YZ7)
+详细请查阅 https://pan.baidu.com/s/1kUXmnGV
